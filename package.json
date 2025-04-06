@@ -7,6 +7,8 @@
     "lint": "biome lint .",
     "format": "biome format . --write",
     "wasm:build": "cd packages/core && wasm-pack build --target web --out-dir ./ --scope tetris --no-opt && rm .gitignore",
+    "wasm:build:as:debug": "cd packages/core-as && npm run asbuild:debug && rm -rf build/.gitignore",
+    "wasm:build:as:release": "cd packages/core-as && npm run asbuild:release && rm -rf build/.gitignore",
     "wasm:watch": "chokidar \"packages/core/src/**/*.rs\" -c \"pnpm wasm:build && pnpm install\"",
     "check-types": "turbo run check-types"
   },

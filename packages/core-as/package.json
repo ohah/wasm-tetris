@@ -1,0 +1,26 @@
+{
+  "name": "core-as",
+  "version": "1.0.0",
+  "description": "AssemblyScript core module for the game",
+  "main": "build/release.js",
+  "types": "build/release.d.ts",
+  "scripts": {
+    "test": "node tests",
+    "asbuild:debug": "asc src/index.ts --target debug",
+    "asbuild:release": "asc src/index.ts --target release",
+    "asbuild": "npm run asbuild:debug && npm run asbuild:release",
+    "start": "npx serve ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "assemblyscript": "^0.27.35"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./build/release.js",
+      "types": "./build/release.d.ts"
+    }
+  }
+}
