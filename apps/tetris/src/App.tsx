@@ -182,7 +182,7 @@ function App() {
   }, []);
 
   return (
-    <div style={{ backgroundColor: '#ffffff' }}>
+    <div style={{ backgroundColor: '#ffffff', color: '#000000' }}>
       <h1>Wasm Tetris</h1>
       <button type="button" onClick={handleRestart}>
         게임 재시작

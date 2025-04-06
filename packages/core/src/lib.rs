@@ -235,19 +235,19 @@ impl Tetris {
 
     pub fn clear_lines(&mut self) -> u32 {
         let mut lines_cleared = 0;
-        let mut lines_to_clear = Vec::new();
+        let mut y = 0;
 
-        for y in 0..self.height {
+        while y < self.height {
             let is_full = self.board[y].iter().all(|&cell| cell != Tetromino::Empty);
             if is_full {
-                lines_to_clear.push(y);
+                // Remove the full line
+                self.board.remove(y);
+                // Add a new empty line at the top
+                self.board.insert(0, vec![Tetromino::Empty; self.width]);
                 lines_cleared += 1;
+            } else {
+                y += 1;
             }
-        }
-
-        for &line in lines_to_clear.iter().rev() {
-            self.board.remove(line);
-            self.board.insert(0, vec![Tetromino::Empty; self.width]);
         }
 
         // 점수 계산: 1줄=100, 2줄=300, 3줄=500, 4줄=800
