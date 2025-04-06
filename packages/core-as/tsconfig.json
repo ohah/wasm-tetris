@@ -1,0 +1,13 @@
+{
+  "extends": "./node_modules/assemblyscript/tsconfig-base.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "outDir": "build",
+    "allowJs": false,
+    "types": ["assemblyscript/std/assembly"]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}

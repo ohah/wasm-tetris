@@ -1,9 +1,9 @@
 {
-  "name": "core-as",
+  "name": "@tetris/core-as",
   "version": "1.0.0",
   "description": "AssemblyScript core module for the game",
-  "main": "build/release.js",
-  "types": "build/release.d.ts",
+  "main": "./build/release.js",
+  "types": "./build/release.d.ts",
   "scripts": {
     "test": "node tests",
     "asbuild:debug": "asc src/index.ts --target debug",
