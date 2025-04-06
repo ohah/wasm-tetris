@@ -1,4 +1,5 @@
 {
+  "editor.formatOnSave": true,
   "eslint.workingDirectories": [
     {
       "mode": "auto"
@@ -19,4 +20,11 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "biomejs.biome",
   },
+  "[rust]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  }
 }

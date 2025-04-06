@@ -6,10 +6,13 @@
     "dev": "turbo run dev",
     "lint": "biome lint .",
     "format": "biome format . --write",
+    "wasm:build": "cd packages/core && wasm-pack build --target web --out-dir ./ --scope tetris --no-opt && rm .gitignore",
+    "wasm:watch": "chokidar \"packages/core/src/**/*.rs\" -c \"pnpm wasm:build && pnpm install\"",
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "chokidar-cli": "^3.0.0",
     "turbo": "^2.5.0",
     "typescript": "5.8.2"
   },

@@ -6,7 +6,25 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "correctness": {
+        "noUnusedVariables": "error",
+        "noUndeclaredVariables": "error",
+        "useExhaustiveDependencies": "error"
+      },
+      "suspicious": {
+        "noExplicitAny": "error",
+        "noConsoleLog": "warn"
+      },
+      "style": {
+        "useConst": "error",
+        "useTemplate": "error",
+        "useShorthandArrayType": "error"
+      },
+      "complexity": {
+        "noForEach": "warn",
+        "useOptionalChain": "error"
+      }
     }
   },
   "formatter": {
@@ -22,5 +40,19 @@
       "trailingCommas": "es5",
       "semicolons": "always"
     }
+  },
+  "files": {
+    "ignore": [
+      "dist",
+      "build",
+      "node_modules",
+      "*.min.js",
+      "*.wasm",
+      "react-env.d.ts",
+      "core.js",
+      "core.wasm",
+      "core.d.ts",
+      "core_bg.wasm.d.ts"
+    ]
   }
-} 
+}

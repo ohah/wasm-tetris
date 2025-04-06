@@ -1,0 +1,18 @@
+[workspace]
+members = [
+  "packages/core",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0 OR MIT"
+rust-version = "1.77.2"
+authors = ["ohah <bookyoon173@gmail.com>"]
+description = "WASM Tetris Project"
+
+[workspace.dependencies]
+wasm-bindgen = "0.2.100"
+web-sys = "0.3.*"
+js-sys = "0.3.*"
+watch = "0.2.3"
